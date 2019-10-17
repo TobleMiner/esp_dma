@@ -21,3 +21,4 @@ typedef struct {
 } esp_dma_chain_t;
 
 esp_err_t esp_dma_chain_alloc(esp_dma_chain_t* chain, size_t len, bool cyclic);
+void esp_dma_chain_free(esp_dma_chain_t* chain);

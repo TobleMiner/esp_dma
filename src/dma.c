@@ -82,3 +82,8 @@ fail_descriptors:
 fail:
   return err;
 }
+
+void esp_dma_chain_free(esp_dma_chain_t* chain) {
+  free(chain->data);
+  free((void*)chain->descriptors);
+}
